@@ -1,0 +1,21 @@
+<html>
+<head>
+    <link rel="stylesheet" href="api.css">
+    <script src="api.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.0/underscore.js"></script>
+</head>
+<body>
+<h2 id="headid" class="heading">Fetching Place Details</h2>
+<input type="text" onkeyup="loadDoc(this.value)">
+<p class="demo" id="results"></p>
+
+
+<script type="text/template" name="location_view">
+    <% results.forEach(function(result) { %>
+        <div id="two"><%= result.formatted_address %></div>
+        <img id="image" src="<%= result.icon %>" />
+    <% }); %>
+</script>
+
+</body>
+</html>
